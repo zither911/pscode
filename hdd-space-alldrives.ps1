@@ -1,6 +1,6 @@
 ﻿ 
 $Credential = Get-Credential -Credential 'sbicza01\ec733365'
-$ComputerName = Get-Content "C:\temp\computers.txt"
+$ComputerName = Get-Content "C:\temp\comp.txt"
 function Format-HumanReadable 
 {
             param ($size)
