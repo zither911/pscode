@@ -1,6 +1,8 @@
-﻿ 
-$Credential = Get-Credential -Credential 'sbicza01\ec733365'
-$ComputerName = Get-Content "C:\temp\comp.txt"
+#Created by Louis Matthee
+#Contact: louis_matthee@yahoo.com
+
+$Credential = Get-Credential
+$ComputerName = Get-Content(Read-Host("Enter file path"))
 function Format-HumanReadable 
 {
             param ($size)
@@ -25,11 +27,7 @@ function Format-HumanReadable
                              -ErrorAction Stop
 
                    # Create array for $disk objects and then populate
-                    $disks | ForEach-Object { $diskarray += $_.Size }
-                    
-
-                       
-              
+                    $disks | ForEach-Object { $diskarray += $_.Size 
             }
             catch 
             {
